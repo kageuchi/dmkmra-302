@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0;url=https://smr-c142ed.webflow.io/">
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected, <a href="https://smr-c142ed.webflow.io/">click here</a>.</p>
+    <img id="loadingGif" src="https://i.imgur.com/lFBretC.gif" alt="Loading...">
+    <p>Redirecting once the animation is complete...</p>
+
+    <script>
+        // Wait for the GIF to fully load and play before redirecting
+        const gif = document.getElementById('loadingGif');
+
+        gif.onload = function () {
+            setTimeout(() => {
+                window.location.href = "hhttps://smr-c142ed.webflow.io/";
+            }, gif.duration * 1000 || 5000); // Fallback to 5 seconds if duration is unknown
+        };
+    </script>
 </body>
 </html>
